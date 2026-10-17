@@ -72,6 +72,7 @@ it('installs only when asked, with progress, cancel, retry, and a status read fr
   expect(await host().status()).toMatchObject({
     installedVersion: '1.0',
     installedCurrent: true,
+    downloadBytes: ARCHIVE.length,
     source: 'managed',
     operation: null
   })

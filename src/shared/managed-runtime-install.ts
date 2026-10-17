@@ -27,6 +27,8 @@ export type ManagedRuntimeInstallState = {
   /** The host has a pinned release; otherwise no Install is offered. */
   available: boolean
   version: string | null
+  /** The pinned release's download size, so Install can say it before a run starts. */
+  downloadBytes?: number
   installedVersion: string | null
   /** False with an installed version: an update is available. */
   installedCurrent: boolean
